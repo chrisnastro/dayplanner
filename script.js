@@ -34,7 +34,7 @@ $(document).ready(function () {
     $(this).removeClass("present");
     } else if (blockTime === currentTime) {
     $(this).removeClass("past");
-    $(this).addClass("past");
+    $(this).addClass("present");
     $(this).removeClass("future");
     } else {
     $(this).removeClass("present");
