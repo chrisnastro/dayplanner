@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $("#currentDay").text(moment().format("MMMM DD YYYY, h:mm:ss a "));
+  $("#currentDay").text(moment().format("MMMM DD YYYY"));
 
   $(".saveBtn").on("click", function () {
 
@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     localStorage.setItem(currentTime, userInput);
   })
+
   $("hour-9 .description").val(localStorage.getItem("hour-9"));
   $("hour-10 .description").val(localStorage.getItem("hour-10"));
   $("hour-11 .description").val(localStorage.getItem("hour-11"));
@@ -24,29 +25,29 @@ $(document).ready(function () {
 
     var currentTime = moment().hour();
 
-    $(".time-block").each(function() {
-    var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-    console.log(currentTime)
+    $(".time-block").each(function () {
+      var blockTime = parseInt($(this).attr("id").split("hour-")[1]);
+      console.log(currentTime)
 
-    if (blockTime < currentTime) {
-    $(this).addClass("past");
-    $(this).removeClass("future");
-    $(this).removeClass("present");
-    } else if (blockTime === currentTime) {
-    $(this).removeClass("past");
-    $(this).addClass("present");
-    $(this).removeClass("future");
-    } else {
-    $(this).removeClass("present");
-    $(this).removeClass("past");
-    $(this).addClass("future");
-    }
-    
+      if (blockTime < currentTime) {
+        $(this).addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+      } else if (blockTime === currentTime) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+        $(this).removeClass("future");
+      } else {
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
+      }
 
-  })
-}
-timeTracker();
-  
+
+    })
+  }
+  timeTracker();
+
 
 })
 
