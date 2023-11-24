@@ -37,5 +37,8 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+Deployed site: https://chrisnastro.github.io/dayplanner/
+
+Github Repository: https://github.com/chrisnastro/dayplanner
 
 ![Deployed website screenshot](assets/images/screenshot.png)
