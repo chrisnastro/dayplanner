@@ -21,7 +21,7 @@ SO THAT I can manage my time effectively
 ```
 
 ## Acceptance Criteria
-``
+```
 
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
@@ -38,3 +38,4 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+![Deployed website screenshot](assets/images/screenshot.png)
